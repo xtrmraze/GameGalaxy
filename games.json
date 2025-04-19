@@ -22,5 +22,11 @@
     "title": "Snake",
     "path": "games/snake/index.html",
     "thumbnail": "assets/snake.png"
-  }
+  },
+  {
+  "id": "bloxparkour",
+  "title": "BloxParkour",
+  "path": "games/bloxparkour/index.html",
+  "thumbnail": "assets/bloxparkour.png"
+}
 ]
