@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Play Game</title>
+  <style>
+    body, html { margin: 0; padding: 0; height: 100%; }
+    iframe { border: none; width: 100%; height: 100%; }
+  </style>
+</head>
+<body>
+  <iframe id="game-frame" src=""></iframe>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const gameId = urlParams.get("game");
+    fetch("games.json")
+      .then(response => response.json())
+      .then(games => {
+        const game = games.find(g => g.id === gameId);
+        if (game) {
+          document.getElementById("game-frame").src = game.path;
+          document.title = "Playing " + game.title;
+        }
+      });
+  </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "2048",
+    "title": "2048",
+    "path": "games/2048/index.html",
+    "thumbnail": "assets/2048.png"
+  },
+  {
+    "id": "hextris",
+    "title": "Hextris",
+    "path": "games/hextris/index.html",
+    "thumbnail": "assets/hextris.png"
+  },
+  {
+    "id": "tictactoe",
+    "title": "Tic Tac Toe",
+    "path": "games/tictactoe/index.html",
+    "thumbnail": "assets/tictactoe.png"
+  },
+  {
+    "id": "snake",
+    "title": "Snake",
+    "path": "games/snake/index.html",
+    "thumbnail": "assets/snake.png"
+  }
+]

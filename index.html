@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>GameGalaxy</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <h1>Welcome to GameGalaxy</h1>
+  <div class="game-list" id="game-list"></div>
+  <script>
+    fetch("games.json")
+      .then(response => response.json())
+      .then(games => {
+        const container = document.getElementById("game-list");
+        games.forEach(game => {
+          const card = document.createElement("div");
+          card.className = "game-card";
+          card.innerHTML = \`
+            <a href="game.html?game=\${game.id}">
+              <img src="\${game.thumbnail}" alt="\${game.title}">
+              <h3>\${game.title}</h3>
+            </a>
+          \`;
+          container.appendChild(card);
+        });
+      });
+  </script>
+</body>
+</html>
